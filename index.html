@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Forensics Hex Analyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">🕵️Hex Analyzer 🔍</h1>
+        <p class="description">Paste hex data from images or files to analyze, convert to ASCII, find patterns, extract file headers, and search for flags.</p>
+        
+        <div class="input-section">
+            <label for="hexInput">Paste hex data from images:</label>
+            <textarea id="hexInput" placeholder="Paste your hex strings here..."></textarea>
+        </div>
+        
+        <div class="button-group">
+            <button onclick="analyzeHex()">🔍 Analyze Hex</button>
+            <button onclick="convertToAscii()">📝 Convert to ASCII</button>
+            <button onclick="findPatterns()">🔍 Find Patterns</button>
+            <button onclick="extractFiles()">📁 Extract File Headers</button>
+            <button onclick="searchFlag()">🚩 Search Flag</button>
+            <button onclick="clearAll()">🗑️ Clear All</button>
+        </div>
+        
+        <div class="output-section">
+            <label>Analysis Results:</label>
+            <div id="output" class="output">Ready to analyze hex data...</div>
+        </div>
+        
+        <div id="analysisGrid" class="analysis-grid"></div>
+    </div>
+</body>
+</html>
